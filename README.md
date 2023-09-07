@@ -2,6 +2,22 @@
 
 Highlight lines of program output based on the latency between them
 
+## Getting started
+
+### Homebrew (recommended)
+
+```
+brew install acj/taps/hts
+```
+
+### From source
+
+You'll need a [Rust toolchain](https://rustup.rs). Clone this repository, and then:
+
+```
+cargo build
+```
+
 ## Usage
 
 ```
