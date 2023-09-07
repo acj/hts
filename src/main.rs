@@ -67,10 +67,11 @@ fn main() {
     }
 
     let latency_display_width: usize = if max_inter_line_latency > chrono::Duration::zero() {
-        duration_as_unit(max_inter_line_latency, &cli.latency_unit)
+        let d: usize = duration_as_unit(max_inter_line_latency, &cli.latency_unit)
             .ilog10()
             .try_into()
-            .unwrap()
+            .unwrap();
+        d + 1
     } else {
         1
     };
