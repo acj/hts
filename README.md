@@ -2,7 +2,7 @@
 
 Highlight lines of program output based on the latency between them
 
-<img width="601" alt="screenshot with hts showing latency for a demo program" src="https://github.com/acj/hts/assets/27923/472e7563-94a3-4d09-bedd-abdc2447fa46">
+<img width="521" alt="screenshot with hts showing latency for a demo program" src="https://github.com/acj/hts/assets/27923/ba91c337-6c94-4ef1-a964-b7b7ab8f6f59">
 
 ## Getting started
 
