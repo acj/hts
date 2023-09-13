@@ -33,3 +33,15 @@ Options:
   -h, --help                         Print help
   -V, --version                      Print version
 ```
+
+Try piping a command into `hts`:
+
+```
+ping google.com -c 4 | hts --echo
+```
+
+If you built hts from source, try it again with highlighting:
+
+```
+cargo clean && cargo build 2>&1 | hts --echo
+```
