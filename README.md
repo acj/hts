@@ -27,7 +27,7 @@ Usage: hts [OPTIONS]
 
 Options:
   -d, --debug                        Turn debugging information on
-  -e, --echo                         Echo lines of input as they arrive. Highlighted output is shown at the end
+  -n, --no-echo                      Do not echo lines of input as they arrive; show highlighted output after the command finishes
   -m, --min-latency <MIN_LATENCY>    Don't highlight lines with latency below this threshold [default: 1ms]
   -l, --latency-unit <LATENCY_UNIT>  Show the latency between lines in the given unit. Valid units are ns, us, ms, s, m, h, d [default: ms]
   -h, --help                         Print help
@@ -37,11 +37,11 @@ Options:
 Try piping a command into `hts`:
 
 ```
-ping google.com -c 4 | hts --echo
+ping google.com -c 4 | hts
 ```
 
 If you built hts from source, try it again with highlighting:
 
 ```
-cargo clean && cargo build 2>&1 | hts --echo
+cargo clean && cargo build 2>&1 | hts
 ```

@@ -12,9 +12,9 @@ struct Cli {
     #[arg(short, long)]
     debug: bool,
 
-    /// Echo lines of input as they arrive. Highlighted output is shown at the end
+    /// Do not echo lines of input as they arrive; show highlighted output after the command finishes
     #[arg(short, long)]
-    echo: bool,
+    no_echo: bool,
 
     /// Don't highlight lines with latency below this threshold
     #[arg(short, long, default_value = "1ms")]
@@ -41,7 +41,7 @@ fn main() {
         .lines()
         .filter_map(|x| x.ok())
         .inspect(|line| {
-            if cli.echo {
+            if !cli.no_echo {
                 println!("{}", line);
             }
         })
