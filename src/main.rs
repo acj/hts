@@ -92,7 +92,7 @@ where
 {
     let lines: Vec<AnnotatedLine> = stream
         .lines()
-        .filter_map(|x| x.ok())
+        .map_while(|x| x.ok())
         .inspect(|line| {
             if echo {
                 println!("{}", line);
@@ -136,7 +136,7 @@ fn latency_display_width(max_inter_line_latency: chrono::Duration, latency_unit:
     latency_display_width
 }
 
-fn max_inter_line_latency(lines: &Vec<AnnotatedLine>) -> chrono::Duration {
+fn max_inter_line_latency(lines: &[AnnotatedLine]) -> chrono::Duration {
     let mut max_inter_line_latency = chrono::Duration::milliseconds(1);
     for (index, line) in lines.iter().enumerate() {
         if index == 0 {
