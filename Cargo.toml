@@ -14,7 +14,7 @@ categories = ["development-tools::profiling"]
 [dependencies]
 anyhow = "1.0.75"
 clap = { version = "4.4.2", features = ["derive"] }
-colored = "2.0.4"
+colored = "3.0.0"
 chrono = { version = "0.4.24", default-features = false, features = ["clock"] }
-duration-string = "0.3.0"
+duration-string = "0.5.2"
 regex = "1.4.2"
