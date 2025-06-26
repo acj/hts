@@ -1,6 +1,6 @@
 [package]
 name = "hts"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Adam Jensen <adam@acj.sh>"]
 description = "Highlight lines of program output based on the latency between them"
